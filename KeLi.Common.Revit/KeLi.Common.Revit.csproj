@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8108879-8A20-41EA-A5F5-D3A7E290D2BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KeLi.Common.Revit</RootNamespace>
+    <AssemblyName>KeLi.Common.Revit</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KeLi.Common.Revit.xml</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\Release\KeLi.Common.Revit.xml</DocumentationFile>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdWindows">
+      <HintPath>..\Libs\Revit.API.2018\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RevitAPI, Version=18.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Revit.API.2018\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI, Version=18.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Revit.API.2018\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIFrameworkServices">
+      <HintPath>..\Libs\Revit.API.2018\UIFrameworkServices.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\BaseBuilder.cs" />
+    <Compile Include="Builder\FamilyInstanceBuilder.cs" />
+    <Compile Include="Builder\GroupBuilder.cs" />
+    <Compile Include="Builder\MaterialBuilder.cs" />
+    <Compile Include="Builder\PipeBuilder.cs" />
+    <Compile Include="Builder\PlaneBuilder.cs" />
+    <Compile Include="Builder\SweepBuilder.cs" />
+    <Compile Include="Builder\ViewBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Relation\GeometryPosition.cs" />
+    <Compile Include="Relation\PointRelation.cs" />
+    <Compile Include="Widget\ButtonInfo.cs" />
+    <Compile Include="Widget\CalcType.cs" />
+    <Compile Include="Widget\ConnectorUtil.cs" />
+    <Compile Include="Widget\KeyCodeEnum.cs" />
+    <Compile Include="Widget\MeshUtil.cs" />
+    <Compile Include="Widget\FilterAssist.cs" />
+    <Compile Include="Widget\HookHandler.cs" />
+    <Compile Include="Widget\HookUtil.cs" />
+    <Compile Include="Widget\LinkUtil.cs" />
+    <Compile Include="Relation\LinePlaneRelation.cs" />
+    <Compile Include="Relation\LineRelation.cs" />
+    <Compile Include="Relation\LineSolidRelation.cs" />
+    <Compile Include="Relation\PlaneRelation.cs" />
+    <Compile Include="Relation\PlaneSolidRelation.cs" />
+    <Compile Include="Relation\PointLineRelation.cs" />
+    <Compile Include="Relation\PointPlaneRelation.cs" />
+    <Compile Include="Relation\PointSolidRelation.cs" />
+    <Compile Include="Relation\SolidRelaction.cs" />
+    <Compile Include="Widget\ParamUtil.cs" />
+    <Compile Include="Widget\RibbonUtil.cs" />
+    <Compile Include="Widget\AreaUtil.cs" />
+    <Compile Include="Widget\BoxUtil.cs" />
+    <Compile Include="Widget\NormalUtil.cs" />
+    <Compile Include="Widget\NumberUtil.cs" />
+    <Compile Include="Widget\RoomSelection.cs" />
+    <Compile Include="Widget\AutoUtil.cs" />
+    <Compile Include="Widget\TypeConverter.cs" />
+    <Compile Include="Widget\VisabilityUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeLi.Common.Tool\KeLi.Common.Tool.csproj">
+      <Project>{349679b3-4bc9-45a0-94e8-06794ed770d1}</Project>
+      <Name>KeLi.Common.Tool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

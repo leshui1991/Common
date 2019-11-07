@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeLi.Common.Tool</name>
+    </assembly>
+    <members>
+        <member name="T:KeLi.Common.Tool.AesEncrypt">
+            <summary>
+            AES加密解密算法
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.AesEncrypt.Keys">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.AesEncrypt.Ivs">
+            <summary>
+            初始化向量
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.AesEncrypt.Encrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            加密
+            </summary>
+            <param name="context"></param>
+            <param name="keys"></param>
+            <param name="ivs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.AesEncrypt.Decrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            解密
+            </summary>
+            <param name="ciphertext"></param>
+            <param name="keys"></param>
+            <param name="ivs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.ConfigAssist">
+            <summary>
+            配置文件信息读写器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.ConfigAssist.GetAssemblyType(System.String)">
+            <summary>
+            获取程序集信息
+            </summary>
+            <param name="className"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.ConfigAssist.GetClassType(System.String)">
+            <summary>
+            获取类的声明
+            </summary>
+            <param name="className"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.ConfigAssist.GetAssemblyName(System.String)">
+            <summary>
+            获取配置文件中的程序集的全称字符串
+            </summary>
+            <param name="className"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.ConfigAssist.GetClassName(System.String)">
+            <summary>
+            获取配置文件中的类的全称字符串
+            </summary>
+            <param name="className"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.DesEncrypt">
+            <summary>
+            DES加密解密算法
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.DesEncrypt.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="content"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.DesEncrypt.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="ciphertext"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.DesEncrypt.GenerateKey">
+            <summary>
+            生成密钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.HttpHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.HttpHelper.Cookies">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Get(KeLi.Common.Tool.ResponseParam,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Get``1(KeLi.Common.Tool.ResponseParam,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.GetFile(KeLi.Common.Tool.ResponseParam,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Post(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Post(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Post``1(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Post``1(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.PostFile(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Delete(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Delete(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Delete``1(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Delete``1(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Put(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Put(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Put``1(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Put``1(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Patch(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Patch(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Patch``1(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.Patch``1(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreateGetHttpResponse(KeLi.Common.Tool.ResponseParam,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePostHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePostHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePostFileHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreateDeleteHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreateDeleteHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePutHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePutHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePatchHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreatePatchHttpResponse(KeLi.Common.Tool.ResponseParam,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CreateParameter(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.HttpHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.ResponseParam">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.Timeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.UserAgent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.ContentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.EncodeType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.Cookies">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.Referer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.Headers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.Proxy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Tool.ResponseParam.TenantId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Tool.ImageUtil">
+            <summary>
+            图像工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.ImageUtil.ToBitmapImage(System.Drawing.Bitmap)">
+            <summary>
+            位图转位图图像
+            </summary>
+            <param name="bitmap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.ImageUtil.GetEmbeddedImage(System.String)">
+            <summary>
+            获取内嵌图像
+            </summary>
+            <param name="resName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.LogAssist">
+            <summary>
+            日志辅助
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.LogAssist.FOLDER_NAME">
+            <summary>
+            日志文件夹名
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.LogAssist.LOG_FILE_FORMAT">
+            <summary>
+            文件名格式
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.LogAssist.ITEM_TITLE">
+            <summary>
+            日志项时间戳
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.LogAssist.WriteLog(System.Object)">
+            <summary>
+            写日志
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:KeLi.Common.Tool.Md5Encrypt">
+            <summary>
+            MD5加密算法
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.Md5Encrypt.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.RandomAssist">
+            <summary>
+            随机数生成器
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.RandomAssist.Rscp">
+            <summary>
+            加密随机数生成器
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.RandomAssist.Bytes">
+            <summary>
+            随机字节容器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateRandomNum">
+            <summary>
+            产生一个非负乱数
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateRandomNum(System.Int32)">
+            <summary>
+            产生一个非负乱数
+            </summary>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateRandomNum(System.Int32,System.Int32)">
+            <summary>
+            产生一个非负乱数
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateNumsByArraySort(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            产生随机字节数组的排序方式的可靠的范围随机数集
+            </summary>
+            <param name="num"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateNumsByIndex(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            产生数组索引方式的可靠的范围随机数集
+            </summary>
+            <param name="num"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateNumsByDetection(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            产生查重过滤方式的可靠的范围随机数集
+            </summary>
+            <param name="num"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateNumsByArrayList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            产生查重过滤方式的可靠的范围随机数集
+            </summary>
+            <param name="num"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RandomAssist.GenerateNumsByHashtable(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            产生哈希表方式的可靠的范围随机数集
+            </summary>
+            <param name="num"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.RsaEncrypt">
+            <summary>
+            RSA加密解密算法
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.RsaEncrypt.Pair">
+            <summary>
+            密钥对
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.RsaEncrypt.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="content"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RsaEncrypt.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="ciphertext"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Tool.RsaEncrypt.GetKeyPair">
+            <summary>
+            获取密钥对
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Tool.SpiderAssist">
+            <summary>
+            爬虫辅助
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.SpiderAssist.Code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.SpiderAssist.USER_AGENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Tool.SpiderAssist.CONTENT_TYPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Tool.SpiderAssist.GetHtml(System.String)">
+            <summary>
+            获取网页内容
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

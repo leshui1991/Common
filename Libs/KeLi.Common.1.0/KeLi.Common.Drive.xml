@@ -1,0 +1,1664 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeLi.Common.Drive</name>
+    </assembly>
+    <members>
+        <member name="T:KeLi.Common.Drive.EntityIo">
+            <summary>
+            实体读写
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertItem(System.String)">
+            <summary>
+            添加单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertItem(System.String,System.Object)">
+            <summary>
+            添加指定单个对象的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertItem(System.String,System.Object[])">
+            <summary>
+            添加指定多个字段的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertRow(System.String)">
+            <summary>
+            添加单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertRow(System.String,System.Object)">
+            <summary>
+            添加指定单个对象的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertRow(System.String,System.Object[])">
+            <summary>
+            添加指定多个字段的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertItems(System.String)">
+            <summary>
+            添加多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertItems(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            添加对象集合的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertItems(System.String,System.Object[])">
+            <summary>
+            添加指定多个对象的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertRows(System.String)">
+            <summary>
+            添加多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertRows(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            添加对象集合的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.InsertRows(System.String,System.Object[])">
+            <summary>
+            添加指定多个对象的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.Clear(System.String)">
+            <summary>
+            清空记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteItem(System.String)">
+            <summary>
+            删除单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteItem(System.String,System.Object)">
+            <summary>
+            删除指定单个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteItem(System.String,System.Object[])">
+            <summary>
+            删除指定多个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteRow(System.String)">
+            <summary>
+            删除单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteRow(System.String,System.Object)">
+            <summary>
+            删除指定单个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteRow(System.String,System.Object[])">
+            <summary>
+            删除指定多个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteItems(System.String)">
+            <summary>
+            删除多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteItems(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            删除某种条件集合的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteItems(System.String,System.Object[])">
+            <summary>
+            删除指定多个条件的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteRows(System.String)">
+            <summary>
+            删除多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteRows(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            删除某种条件集合的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.DeleteRows(System.String,System.Object[])">
+            <summary>
+            删除指定多个条件的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateItem(System.String)">
+            <summary>
+            更新单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateItem(System.String,System.Object)">
+            <summary>
+            更新指定单个字段的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateItem(System.String,System.Object[])">
+            <summary>
+            更新指定多个字段的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateRow(System.String)">
+            <summary>
+            更新单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateRow(System.String,System.Object)">
+            <summary>
+            更新指定单个字段的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateRow(System.String,System.Object[])">
+            <summary>
+            更新指定多个字段的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateItems(System.String)">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateItems(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            更新指定对象集合的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateItems(System.String,System.Object[])">
+            <summary>
+            更新指定多个对象的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateRows(System.String)">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateRows(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            更新指定对象集合的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateRows(System.String,System.Object[])">
+            <summary>
+            更新指定多个对象的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.Checkout(System.String)">
+            <summary>
+            检出记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryObject(System.String)">
+            <summary>
+            查询单个数值
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryObject(System.String,System.Object)">
+            <summary>
+            查询指定单个条件的指定单个数值
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryObject(System.String,System.Object[])">
+            <summary>
+            查询指定多个条件的指定单个数值
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryValue(System.String)">
+            <summary>
+            查询单个数值
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryValue(System.String,System.Object)">
+            <summary>
+            查询指定单个条件的指定单个数值
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryValue(System.String,System.Object[])">
+            <summary>
+            查询指定多个条件的指定单个数值
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryItem(System.String)">
+            <summary>
+            查询单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryItem(System.String,System.Object)">
+            <summary>
+            查询指定单个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryItem(System.String,System.Object[])">
+            <summary>
+            查询指定多个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryRow(System.String)">
+            <summary>
+            查询单条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryRow(System.String,System.Object)">
+            <summary>
+            查询指定单个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryRow(System.String,System.Object[])">
+            <summary>
+            查询指定多个条件的单条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryItems(System.String)">
+            <summary>
+            查询多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryItems(System.String,System.Object)">
+            <summary>
+            查询指定单个条件的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryItems(System.String,System.Object[])">
+            <summary>
+            查询指定多个条件的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryRows(System.String)">
+            <summary>
+            查询多条记录
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryRows(System.String,System.Object)">
+            <summary>
+            查询指定单个条件的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryRows(System.String,System.Object[])">
+            <summary>
+            查询指定多个条件的多条记录
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.UpdateData(System.String,System.Object[])">
+            <summary>
+            更新数据
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QuerySingle(System.String,System.Object[])">
+            <summary>
+            查询数值
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityIo.QueryData(System.String,System.Object[])">
+            <summary>
+            查询数据
+            </summary>
+            <param name="sql"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Drive.EntityOpt">
+            <summary> 实体操作
+            
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.InsertItem">
+            <summary> 添加单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.InsertItem(System.Object)">
+            <summary> 添加单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.InsertItem(System.Object[])">
+            <summary> 添加单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.InsertItems">
+            <summary> 添加多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.InsertItems(System.Collections.Generic.List{System.Object})">
+            <summary> 添加多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.InsertItems(System.Object[])">
+            <summary> 添加多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.DeleteItem(System.Object)">
+            <summary> 删除单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.DeleteItem(System.Object[])">
+            <summary> 删除单条数据
+            
+            </summary>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.DeleteItems(System.Collections.Generic.List{System.Object})">
+            <summary> 删除多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.DeleteItems(System.Object[])">
+            <summary> 删除多条数据
+            
+            </summary>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.UpdateItem(System.Object)">
+            <summary> 更新单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.UpdateItem(System.Object[])">
+            <summary> 更新单条数据
+            
+            </summary>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.UpdateItems(System.Collections.Generic.List{System.Object})">
+            <summary> 更新多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.UpdateItems(System.Object[])">
+            <summary> 更新多条数据
+            
+            </summary>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryObject(System.Object)">
+            <summary> 查询单个数值
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryObject(System.Object[])">
+            <summary> 查询单个数值
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryItem(System.Object)">
+            <summary> 查询单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryItem(System.Object[])">
+            <summary> 查询单条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryItems">
+            <summary> 查询多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryItems(System.Object)">
+            <summary> 查询多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.EntityOpt.QueryItems(System.Object[])">
+            <summary> 查询多条数据
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Drive.ExcelAssist">
+            <summary>
+            Excel辅助
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ImportTwoArray(KeLi.Common.Drive.ExcelParam)">
+            <summary>
+            导入到二维数组
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ImportCrossArray(KeLi.Common.Drive.ExcelParam)">
+            <summary>
+            导入到交叉数组
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ImportList``1(KeLi.Common.Drive.ExcelParam)">
+            <summary>
+            导入到List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ImportDataTable(KeLi.Common.Drive.ExcelParam)">
+            <summary>
+            导入到DataTable
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ExportExcel``1(KeLi.Common.Drive.ExcelParam,System.Collections.Generic.List{``0},System.Boolean)">
+            <summary>
+            导出到Excel
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objs"></param>
+            <param name="param"></param>
+            <param name="createHeader"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ExportExcel(KeLi.Common.Drive.ExcelParam,System.Object[][],System.Boolean)">
+            <summary>
+            导出到Excel
+            </summary>
+            <param name="param"></param>
+            <param name="table"></param>
+            <param name="resetRowIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ExportExcel(KeLi.Common.Drive.ExcelParam,System.Object[0:,0:])">
+            <summary>
+            导出到Excel
+            </summary>
+            <param name="param"></param>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.ExportExcel(KeLi.Common.Drive.ExcelParam,System.Data.DataTable,System.Boolean)">
+            <summary>
+            导出到Excel
+            </summary>
+            <param name="table"></param>
+            <param name="param"></param>
+            <param name="createHeader"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.SetExcelStyle(OfficeOpenXml.ExcelPackage,System.Action{OfficeOpenXml.ExcelWorksheet},KeLi.Common.Drive.ExcelParam)">
+            <summary>
+            设置自定义样式
+            </summary>
+            <param name="excel"></param>
+            <param name="action"></param>
+            <param name="param"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.GetExcelPackage(KeLi.Common.Drive.ExcelParam,OfficeOpenXml.ExcelWorksheet@)">
+            <summary>
+            获取Excel对象
+            </summary>
+            <param name="param"></param>
+            <param name="sheet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.GetDcrp(System.Reflection.PropertyInfo)">
+            <summary>
+            获取属性的注释
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.GetSpan(System.Reflection.PropertyInfo)">
+            <summary>
+            获取属性的跨列数
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.GetReference(System.Reflection.PropertyInfo)">
+            <summary>
+            获取属性的参照列
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelAssist.GetMegerValue(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Int32)">
+            <summary>
+            获取融合后范围内单元格的值
+            </summary>
+            <param name="worksheet"></param>
+            <param name="row"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Drive.ExcelStyleUtil">
+            <summary>
+            Excel样式工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetExcelStyle(OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            设置Excel样式
+            </summary>
+            <param name="worksheet"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.CalcValue(OfficeOpenXml.ExcelRange,System.String)">
+            <summary>
+            计算值
+            </summary>
+            <param name="range"></param>
+            <param name="formula"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetNumberformat(OfficeOpenXml.ExcelRange,System.String)">
+            <summary>
+            设置单元格数值格式
+            </summary>
+            <param name="range"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetAlign(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelHorizontalAlignment)">
+            <summary>
+            设置单元格水平对齐方式
+            </summary>
+            <param name="range"></param>
+            <param name="hAlign"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetAlign(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelVerticalAlignment)">
+            <summary>
+            设置单元格垂直对齐方式
+            </summary>
+            <param name="range"></param>
+            <param name="vAlign"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetAlign(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelHorizontalAlignment,OfficeOpenXml.Style.ExcelVerticalAlignment)">
+            <summary>
+            设置单元格对齐方式
+            </summary>
+            <param name="range"></param>
+            <param name="hAlign"></param>
+            <param name="vAlign"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetWrapText(OfficeOpenXml.ExcelWorksheet,System.Boolean)">
+            <summary>
+            自动换行
+            </summary>
+            <param name="worksheet"></param>
+            <param name="wrap"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetWrapText(OfficeOpenXml.ExcelRange,System.Boolean)">
+            <summary>
+            自动换行
+            </summary>
+            <param name="range"></param>
+            <param name="wrap"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFont(OfficeOpenXml.ExcelWorksheet,System.Drawing.Color,System.String,System.Int32)">
+            <summary>
+            设置单元格字体样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="color"></param>
+            <param name="name"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFont(OfficeOpenXml.ExcelRange,System.Drawing.Color,System.String,System.Int32)">
+            <summary>
+            设置单元格字体样式
+            </summary>
+            <param name="range"></param>
+            <param name="color"></param>
+            <param name="name"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFill(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFill(OfficeOpenXml.ExcelWorksheet,System.Drawing.Color)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFill(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFill(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelFillStyle)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFill(OfficeOpenXml.ExcelRange,System.Drawing.Color)">
+            <summary>
+            设置单元格填充背景色
+            </summary>
+            <param name="range"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFill(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格填充样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorder(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorder(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorder(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorder(OfficeOpenXml.ExcelRange,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorderItem(OfficeOpenXml.ExcelWorksheet,KeLi.Common.Drive.Position,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            单独设置单元格某边边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorderItem(OfficeOpenXml.ExcelWorksheet,KeLi.Common.Drive.Position,System.Drawing.Color)">
+            <summary>
+            单独设置单元格某边边框颜色
+            </summary>
+            <param name="worksheet"></param>
+            <param name="position"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorderItem(OfficeOpenXml.ExcelWorksheet,KeLi.Common.Drive.Position,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格某边边框样式
+            </summary>
+            <param name="worksheet"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorderItem(OfficeOpenXml.ExcelRange,KeLi.Common.Drive.Position,OfficeOpenXml.Style.ExcelBorderStyle)">
+            <summary>
+            单独设置单元格某边边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorderItem(OfficeOpenXml.ExcelRange,KeLi.Common.Drive.Position,System.Drawing.Color)">
+            <summary>
+            单独设置单元格某边边框颜色
+            </summary>
+            <param name="range"></param>
+            <param name="position"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBorderItem(OfficeOpenXml.ExcelRange,KeLi.Common.Drive.Position,OfficeOpenXml.Style.ExcelBorderStyle,System.Drawing.Color)">
+            <summary>
+            设置单元格某边边框样式
+            </summary>
+            <param name="range"></param>
+            <param name="position"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetShrink(OfficeOpenXml.ExcelWorksheet,System.Boolean)">
+            <summary>
+            设置单元格文字伸缩适应单元格大小
+            </summary>
+            <param name="worksheet"></param>
+            <param name="shrink"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetShrink(OfficeOpenXml.ExcelRange,System.Boolean)">
+            <summary>
+            设置单元格文字伸缩适应单元格大小
+            </summary>
+            <param name="range"></param>
+            <param name="shrink"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFit(OfficeOpenXml.ExcelWorksheet)">
+            <summary>
+            设置单元格伸缩适应单元格文字长度
+            </summary>
+            <param name="worksheet"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFit(OfficeOpenXml.ExcelWorksheet,System.Double)">
+            <summary>
+            设置单元格伸缩适应单元格文字长度
+            </summary>
+            <param name="worksheet"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFit(OfficeOpenXml.ExcelRange)">
+            <summary>
+            设置单元格伸缩适应单元格文字长度
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFit(OfficeOpenXml.ExcelColumn)">
+            <summary>
+            设置表格列伸缩适应单元格文字长度
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetFit(OfficeOpenXml.ExcelColumn,System.Double)">
+            <summary>
+            设置表格列伸缩适应单元格文字长度
+            </summary>
+            <param name="column"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetDefaultHeight(OfficeOpenXml.ExcelWorksheet,System.Int32)">
+            <summary>
+            设置默认行高
+            </summary>
+            <param name="worksheet"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetDefaultWidth(OfficeOpenXml.ExcelWorksheet,System.Int32)">
+            <summary>
+            设置默认列宽
+            </summary>
+            <param name="worksheet"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetRowHeight(OfficeOpenXml.ExcelRow,System.Int32)">
+            <summary>
+            设置行高
+            </summary>
+            <param name="row"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetColumnWidth(OfficeOpenXml.ExcelColumn,System.Int32)">
+            <summary>
+            设置列宽
+            </summary>
+            <param name="col"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBackground(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Image,System.Boolean)">
+            <summary>
+            设置背景
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="img"></param>
+            <param name="showLines"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBackground(OfficeOpenXml.ExcelWorksheet,System.Drawing.Color,System.Drawing.Image,System.Boolean)">
+            <summary>
+            设置背景
+            </summary>
+            <param name="worksheet"></param>
+            <param name="color"></param>
+            <param name="img"></param>
+            <param name="showLines"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetBackground(OfficeOpenXml.ExcelWorksheet,OfficeOpenXml.Style.ExcelFillStyle,System.Drawing.Color,System.Drawing.Image,System.Boolean)">
+            <summary>
+            设置背景
+            </summary>
+            <param name="worksheet"></param>
+            <param name="style"></param>
+            <param name="color"></param>
+            <param name="img"></param>
+            <param name="showLines"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetPicture(OfficeOpenXml.ExcelWorksheet,System.String,System.Drawing.Image,System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            插入图片
+            </summary>
+            <param name="worksheet"></param>
+            <param name="name"></param>
+            <param name="img"></param>
+            <param name="pt"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetLink(OfficeOpenXml.ExcelWorksheet,System.String,System.Drawing.Image,System.String)">
+            <summary>
+            给图片加超链接
+            </summary>
+            <param name="worksheet"></param>
+            <param name="link"></param>
+            <param name="img"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetCellLink(OfficeOpenXml.ExcelWorksheet,System.String)">
+            <summary>
+            给单元格加超链接
+            </summary>
+            <param name="worksheet"></param>
+            <param name="link"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetCellLink(OfficeOpenXml.ExcelRange,System.String)">
+            <summary>
+            给单元格加超链接
+            </summary>
+            <param name="range"></param>
+            <param name="link"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetHiddent(OfficeOpenXml.ExcelWorksheet,System.Boolean)">
+            <summary>
+            隐藏工作表
+            </summary>
+            <param name="worksheet"></param>
+            <param name="hidden"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetRowHiddent(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Boolean)">
+            <summary>
+            隐藏某一行
+            </summary>
+            <param name="worksheet"></param>
+            <param name="row"></param>
+            <param name="hidden"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelStyleUtil.SetColHiddent(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Boolean)">
+            <summary>
+            隐藏某一列
+            </summary>
+            <param name="worksheet"></param>
+            <param name="col"></param>
+            <param name="hidden"></param>
+        </member>
+        <member name="T:KeLi.Common.Drive.ArrayConverter">
+            <summary>
+            数组转换器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.ArrayConverter.Convert(System.Object[0:,0:])">
+            <summary>
+            二维数据转交叉数组
+            </summary>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.ArrayConverter.Convert(System.Object[][])">
+            <summary>
+            交叉数组转二维数据
+            </summary>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Drive.Position">
+            <summary>
+            位置枚举
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.Position.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.Position.Right">
+            <summary>
+            右
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.Position.Top">
+            <summary>
+            顶
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.Position.Bottom">
+            <summary>
+            底
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.Position.Diagonal">
+            <summary>
+            对角
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Drive.ExcelParam">
+            <summary>
+            辅助参数
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ExcelParam.SHEET_NAME">
+            <summary>
+            默认工作簿名称
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.ExcelParam.#ctor(System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="filePath"></param>
+            <param name="templatePath"></param>
+        </member>
+        <member name="P:KeLi.Common.Drive.ExcelParam.TemplatePath">
+            <summary>
+            模板路径
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.ExcelParam.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.ExcelParam.SheetName">
+            <summary>
+            工作表名称
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.ExcelParam.RowIndex">
+            <summary>
+            开始行索引
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.ExcelParam.ColumnIndex">
+            <summary>
+            开始列索引
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Drive.ReferenceAttribute">
+            <summary>
+            参照特性
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.ReferenceAttribute.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="columnName"></param>
+        </member>
+        <member name="P:KeLi.Common.Drive.ReferenceAttribute.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Drive.SpanAttribute">
+            <summary>
+            标题跨列特性
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.SpanAttribute.#ctor(System.Int32)">
+            <summary>
+            初始化
+            </summary>
+            <param name="columnSpan"></param>
+        </member>
+        <member name="P:KeLi.Common.Drive.SpanAttribute.ColumnSpan">
+            <summary>
+            跨列数
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Drive.PdfConverter">
+            <summary>
+            PDF转换器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.ToImages(KeLi.Common.Drive.PdfParam)">
+            <summary>
+            PDF转图片
+            </summary>
+            <param name="param"></param>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.GetPdfSize(System.String)">
+            <summary>
+            获取文件的页面大小
+            </summary>
+            <param name="pdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.SplitedPdfs(System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            拆分到多个文件的名称列表
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdfs"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.CopyPdf(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            复制指定页码范围的文件并另存
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="startPage"></param>
+            <param name="endPage"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.ExtractPdf(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            抽取指定页码范围的文件并另存
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="startPage"></param>
+            <param name="endPage"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.ExtractPdf(System.String,System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            抽取指定页面的文件并另存
+            </summary>
+            <param name="sourcePdf"></param>
+            <param name="targetPdf"></param>
+            <param name="extractPages"></param>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfConverter.GetPageMark(iTextSharp.text.pdf.PdfReader)">
+            <summary>
+            获取页面书签
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Drive.PdfParam">
+            <summary>
+            Pdf参数
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.PdfParam.#ctor(System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="pdfPath"></param>
+            <param name="startPage"></param>
+            <param name="endPage"></param>
+            <param name="imgName"></param>
+        </member>
+        <member name="P:KeLi.Common.Drive.PdfParam.PdfPath">
+            <summary>
+            Pdf路径
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.PdfParam.ImgName">
+            <summary>
+            图片名称
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.PdfParam.StartPage">
+            <summary>
+            起始页
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.PdfParam.EndPage">
+            <summary>
+            截止页
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.PdfParam.Format">
+            <summary>
+            图片格式
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.PdfParam.Resolution">
+            <summary>
+            清晰度
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Drive.ResolutionLvl">
+            <summary>
+            清晰度等级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.One">
+            <summary>
+            一级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Two">
+            <summary>
+            二级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Three">
+            <summary>
+            三级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Four">
+            <summary>
+            四级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Five">
+            <summary>
+            五级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Six">
+            <summary>
+            六级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Seven">
+            <summary>
+            七级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Eight">
+            <summary>
+            八级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Nine">
+            <summary>
+            九级
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Drive.ResolutionLvl.Ten">
+            <summary>
+            十级
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Drive.SqlAssist">
+            <summary>
+            数据库辅助
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Drive.SqlAssist.ConnSql">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.ConnectSuccess">
+            <summary>
+            是否连接数据库成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.UpdateData(System.String,System.Data.CommandType)">
+            <summary>
+            执行单条更新命令来更新若干条数据
+            </summary>
+            <param name="text"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.UpdateData(System.String,System.Data.SqlClient.SqlParameter[],System.Data.CommandType)">
+            <summary>
+            执行含参数的单条更新命令来更新若干条数据
+            </summary>
+            <param name="text"></param>
+            <param name="sps"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.UpdateMultiple(System.Collections.Generic.List{System.String},System.Data.CommandType)">
+            <summary>
+            执行多条更新命令来更新若干条数据
+            </summary>
+            <param name="texts"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.UpdateMultiple(System.Collections.Generic.List{System.String},System.Data.SqlClient.SqlParameter[][],System.Data.CommandType)">
+            <summary>
+            执行含参数的多条更新命令来更新若干条数据
+            </summary>
+            <param name="texts"></param>
+            <param name="sps"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.QueryObject(System.String,System.Data.CommandType)">
+            <summary>
+            执行单条查询命令来查询单个数值
+            </summary>
+            <param name="text"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.QueryObject(System.String,System.Data.SqlClient.SqlParameter[],System.Data.CommandType)">
+            <summary>
+            执行含参数的单条查询命令来查询单个数值
+            </summary>
+            <param name="text"></param>
+            <param name="sps"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.QueryData(System.String,System.Data.CommandType)">
+            <summary>
+            执行单条查询命令来查询若干条数据
+            </summary>
+            <param name="text"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.QueryData(System.String,System.Data.SqlClient.SqlParameter[],System.Data.CommandType)">
+            <summary>
+            执行含参数的单条查询命令来查询若干条数据
+            </summary>
+            <param name="text"></param>
+            <param name="sps"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.GetDatabaseName">
+            <summary>
+            获取数据库名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlAssist.GetConnSql">
+            <summary>
+            获取数据库连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Drive.SqlOrm">
+            <summary>
+            实体关系映射数据库
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.InsertItem``1(``0,System.Boolean,System.Boolean)">
+            <summary>
+            添加单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="isIdentity"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.InsertItems``1(System.Collections.Generic.List{``0},System.Boolean,System.Boolean)">
+            <summary>
+            添加多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ts"></param>
+            <param name="isIdentity"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.InsertRow``1(``0)">
+            <summary>
+            添加单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.InsertRows``1(System.Collections.Generic.List{``0})">
+            <summary>
+            添加多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.InsertTable(System.Data.DataTable)">
+            <summary>
+            添加若干条记录
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.Clear``1">
+            <summary>
+            清空记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.DeleteItem``1(System.Object,System.String,System.Boolean)">
+            <summary>
+            删除单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="field"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.DeleteItem``1(System.Object[],System.String[],System.Boolean)">
+            <summary>
+            删除单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="fields"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.DeleteItems``1(System.Collections.Generic.List{System.Object},System.String,System.Boolean)">
+            <summary>
+            删除多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="field"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.DeleteRow``1(System.Object)">
+            <summary>
+            删除单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.DeleteRows``1(System.Collections.Generic.List{System.Object})">
+            <summary>
+            删除多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.UpdateItem``1(``0,System.Boolean)">
+            <summary>
+            更新单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.UpdateItems``1(System.Collections.Generic.List{``0},System.Boolean)">
+            <summary>
+            更新多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ts"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.UpdateRow``1(``0)">
+            <summary>
+            修改单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.UpdateRows``1(System.Collections.Generic.List{``0})">
+            <summary>
+            修改多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.Checkout``1">
+            <summary>
+            检出记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.QueryItem``1(System.Object,System.String,System.Boolean)">
+            <summary>
+            查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="field"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.QueryItem``1(System.Object[],System.String[],System.Boolean)">
+            <summary>
+            查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="fields"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.QueryRow``1(System.Object,System.String,System.Boolean)">
+            <summary>
+            查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="field"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.QueryItems``1(System.Collections.Generic.List{System.Object},System.String,System.Boolean)">
+            <summary>
+            查询多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="field"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.QueryRows``1(System.Collections.Generic.List{System.Object},System.String,System.Boolean)">
+            <summary>
+            查询多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="field"></param>
+            <param name="hasPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.TrimEndChar(System.Text.StringBuilder,System.String)">
+            <summary>
+            去除末尾字符串后的字符串
+            </summary>
+            <param name="sb"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.AddQuoteMark(System.Object)">
+            <summary>
+            向数据库中存入字符串添加引号
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Drive.SqlOrm.RemoveQuoteMark(System.Object)">
+            <summary>
+            从数据库中读取字符串移除引号
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

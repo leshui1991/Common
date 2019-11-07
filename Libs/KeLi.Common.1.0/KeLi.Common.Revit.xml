@@ -1,0 +1,1888 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeLi.Common.Revit</name>
+    </assembly>
+    <members>
+        <member name="T:KeLi.Common.Revit.Builder.BaseBuilder">
+            <summary>
+            基础构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddLevel(Autodesk.Revit.DB.Document,System.Double)">
+            <summary>
+            添加标高
+            </summary>
+            <param name="doc"></param>
+            <param name="elevation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddWall(Autodesk.Revit.DB.Document,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            添加墙
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddWall(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.ElementId)">
+            <summary>
+            添加墙
+            </summary>
+            <param name="doc"></param>
+            <param name="curve"></param>
+            <param name="lvlId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddWall(Autodesk.Revit.DB.Document,System.Collections.Generic.List{Autodesk.Revit.DB.Curve},Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId)">
+            <summary>
+            添加墙
+            </summary>
+            <param name="doc"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="profile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddWall(Autodesk.Revit.DB.Document,System.Collections.Generic.List{Autodesk.Revit.DB.Curve},Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            添加墙
+            </summary>
+            <param name="doc"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="profile"></param>
+            <param name="normal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddFloor(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArray)">
+            <summary>
+            添加楼板
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddFloor(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArray,Autodesk.Revit.DB.FloorType,Autodesk.Revit.DB.Level)">
+            <summary>
+            添加楼板
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <param name="type"></param>
+            <param name="lvl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddFloor(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArray,Autodesk.Revit.DB.FloorType,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            添加楼板
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <param name="type"></param>
+            <param name="lvl"></param>
+            <param name="normal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddExtrusionRoof(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArray,Autodesk.Revit.DB.ReferencePlane,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.RoofType,System.Double,System.Double)">
+            <summary>
+            添加拉伸屋顶
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <param name="plane"></param>
+            <param name="lvl"></param>
+            <param name="type"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.BaseBuilder.AddFootPrintRoof(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArray,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.RoofType,Autodesk.Revit.DB.ModelCurveArray@)">
+            <summary>
+            添加迹线屋顶
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <param name="lvl"></param>
+            <param name="type"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.FamilyInstanceBuilder">
+            <summary>
+            族实例构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilyInstance(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.FamilySymbol,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.Structure.StructuralType)">
+            <summary>
+            添加族实例
+            </summary>
+            <param name="doc"></param>
+            <param name="location"></param>
+            <param name="symbol"></param>
+            <param name="lvl"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilyInstance(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.FamilySymbol,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Structure.StructuralType)">
+            <summary>
+            添加族实例
+            </summary>
+            <param name="doc"></param>
+            <param name="location"></param>
+            <param name="symbol"></param>
+            <param name="elm"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilyInstance(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.FamilySymbol,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Level,Autodesk.Revit.DB.Structure.StructuralType)">
+            <summary>
+            添加族实例
+            </summary>
+            <param name="doc"></param>
+            <param name="location"></param>
+            <param name="symbol"></param>
+            <param name="elm"></param>
+            <param name="lvl"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilyInstance(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.FamilySymbol,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Structure.StructuralType)">
+            <summary>
+            添加族实例
+            </summary>
+            <param name="doc"></param>
+            <param name="location"></param>
+            <param name="symbol"></param>
+            <param name="elm"></param>
+            <param name="type"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilySymbol(Autodesk.Revit.UI.UIApplication,System.String,Autodesk.Revit.DB.CurveArrArray,Autodesk.Revit.DB.SketchPlane,System.Double)">
+            <summary>
+            添加族类型
+            </summary>
+            <param name="uiapp"></param>
+            <param name="rfa"></param>
+            <param name="profile"></param>
+            <param name="plane"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilySymbol(Autodesk.Revit.UI.UIApplication,System.String,Autodesk.Revit.DB.SweepProfile,Autodesk.Revit.DB.ReferenceArray,System.Int32)">
+            <summary>
+            添加族类型
+            </summary>
+            <param name="uiapp"></param>
+            <param name="rfa"></param>
+            <param name="profile"></param>
+            <param name="path"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilySymbol(Autodesk.Revit.UI.UIApplication,System.String)">
+            <summary>
+            添加族类型
+            </summary>
+            <param name="uiapp"></param>
+            <param name="rfa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.FamilyInstanceBuilder.AddFamilySymbol(Autodesk.Revit.UI.UIApplication,System.String,System.Action{Autodesk.Revit.DB.Document})">
+            <summary>
+            添加族类型
+            </summary>
+            <param name="uiapp"></param>
+            <param name="rft"></param>
+            <param name="act"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.GroupBuilder">
+            <summary>
+            组构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.GroupBuilder.AddGroup(Autodesk.Revit.DB.Document,System.Collections.Generic.List{Autodesk.Revit.DB.ElementId})">
+            <summary>
+            添加组
+            </summary>
+            <param name="doc"></param>
+            <param name="elmIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.MaterialBuilder">
+            <summary>
+            材质构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.MaterialBuilder.AddMaterial(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            添加材质
+            </summary>
+            <param name="doc"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.PipeBuilder">
+            <summary>
+            管道构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PipeBuilder.AddPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.Connector,Autodesk.Revit.DB.Connector)">
+            <summary>
+            添加管道
+            </summary>
+            <param name="doc"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PipeBuilder.AddPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.Connector,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            添加管道
+            </summary>
+            <param name="doc"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PipeBuilder.AddPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            添加管道
+            </summary>
+            <param name="doc"></param>
+            <param name="systemId"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PipeBuilder.AddFlexPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,System.Collections.Generic.List{Autodesk.Revit.DB.XYZ})">
+            <summary>
+            添加软管
+            </summary>
+            <param name="doc"></param>
+            <param name="systemId"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PipeBuilder.AddFlexPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,System.Collections.Generic.List{Autodesk.Revit.DB.XYZ})">
+            <summary>
+            添加软管
+            </summary>
+            <param name="doc"></param>
+            <param name="systemId"></param>
+            <param name="typeId"></param>
+            <param name="lvlId"></param>
+            <param name="end"></param>
+            <param name="points"></param>
+            <param name="start"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PipeBuilder.AddConduit(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.ElementId)">
+            <summary>
+            添加线管
+            </summary>
+            <param name="doc"></param>
+            <param name="typeId"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="lvlId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.PlaneBuilder">
+            <summary>
+            平面构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PlaneBuilder.AddReferencePlane(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.View)">
+            <summary>
+            添加引用平面
+            </summary>
+            <param name="doc"></param>
+            <param name="bubble"></param>
+            <param name="free"></param>
+            <param name="vector"></param>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PlaneBuilder.AddSketchPlane(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId)">
+            <summary>
+            添加参照平面
+            </summary>
+            <param name="doc"></param>
+            <param name="datumId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PlaneBuilder.AddSketchPlane(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Plane)">
+            <summary>
+            添加参照平面
+            </summary>
+            <param name="doc"></param>
+            <param name="plane"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.PlaneBuilder.AddSketchPlane(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Reference)">
+            <summary>
+            添加参照平面
+            </summary>
+            <param name="doc"></param>
+            <param name="refer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.SweepBuilder">
+            <summary>
+            放样拉伸构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.SweepBuilder.AddSweep(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.SweepProfile,Autodesk.Revit.DB.ReferenceArray,System.Int32)">
+            <summary>
+            添加放样
+            </summary>
+            <param name="doc"></param>
+            <param name="path"></param>
+            <param name="profile"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.SweepBuilder.AddExtrusion(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArrArray,Autodesk.Revit.DB.SketchPlane,System.Double)">
+            <summary>
+            添加拉伸
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <param name="plane"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.SweepBuilder.AddProfile(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.CurveArrArray)">
+            <summary>
+            添加放样轮廓
+            </summary>
+            <param name="doc"></param>
+            <param name="profile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Builder.ViewBuilder">
+            <summary>
+            视图构造器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Builder.ViewBuilder.AddViewSection(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            添加视图剖面
+            </summary>
+            <param name="doc"></param>
+            <param name="elmId"></param>
+            <param name="box"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.ButtonInfo`1">
+            <summary>
+            按钮信息
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ButtonInfo`1.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ButtonInfo`1.CreatePbd">
+            <summary>
+            创建按钮信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.ConnectorUtil">
+            <summary>
+            连接器工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.ConnectWall(Autodesk.Revit.DB.Document)">
+            <summary>
+            连接墙
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.ConnectInstance(Autodesk.Revit.DB.Document,System.Collections.Generic.List{System.Double})">
+            <summary>
+            连接放样拉伸
+            </summary>
+            <param name="doc"></param>
+            <param name="elvs"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.ConnectPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.MEPCurve)">
+            <summary>
+            连接两个管道
+            </summary>
+            <param name="doc"></param>
+            <param name="pipe1"></param>
+            <param name="pipe2"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.ConnectPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.MEPCurve)">
+            <summary>
+            连接三个管道
+            </summary>
+            <param name="doc"></param>
+            <param name="pipe1"></param>
+            <param name="pipe2"></param>
+            <param name="pipe3"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.ConnectPipe(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.MEPCurve)">
+            <summary>
+            连接四个管道
+            </summary>
+            <param name="doc"></param>
+            <param name="pipe1"></param>
+            <param name="pipe2"></param>
+            <param name="pipe3"></param>
+            <param name="pipe4"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.GetLatestConnector(Autodesk.Revit.DB.MEPCurve,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取元素最近的连接器
+            </summary>
+            <param name="pipe"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ConnectorUtil.GetLatestConnector(Autodesk.Revit.DB.ConnectorSet,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取元素最近的连接器
+            </summary>
+            <param name="connectors"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.MeshUtil">
+            <summary>
+            元素网格工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetDispersedLines(Autodesk.Revit.DB.Curve,System.Int32)">
+            <summary>
+            获取离散线段列表
+            </summary>
+            <param name="curve">离散点</param>
+            <param name="gapNum">间隔数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetDispersedLines(System.Collections.Generic.IList{Autodesk.Revit.DB.XYZ},System.Int32)">
+            <summary>
+            获取离散线段列表
+            </summary>
+            <param name="points">离散点</param>
+            <param name="gapNum">间隔数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetMeshTriangles(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取三角片字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetMeshTriangles(Autodesk.Revit.DB.Mesh)">
+            <summary>
+            获取三角片列表
+            </summary>
+            <param name="mesh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetMeshes(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取元素的网格列表
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetFaces(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取元素的的面列表
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetPoints(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取顶点数
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetVaildPoints(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取有效顶点数
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetEdges(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取边界列表
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetValidSolids(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取有效的几何体列表
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.MeshUtil.GetValidSolids(Autodesk.Revit.DB.GeometryElement,System.Int32)">
+            <summary>
+            获取有效的几何体列表
+            </summary>
+            <param name="ge"></param>
+            <param name="precision"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.FilterAssist">
+            <summary>
+            过滤器辅助
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetFaceNumElements(Autodesk.Revit.DB.Document,System.Int32,System.Boolean)">
+            <summary>
+            获取面数设定值过滤的元素列表
+            </summary>
+            <param name="doc"></param>
+            <param name="faceNum"></param>
+            <param name="moreThan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetVertextNumElements(Autodesk.Revit.DB.Document,System.Int32,System.Boolean)">
+            <summary>
+            获取顶点数设定值过滤的元素列表
+            </summary>
+            <param name="doc"></param>
+            <param name="maxVertextNum"></param>
+            <param name="moreThan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetVaildVertextNumElements(Autodesk.Revit.DB.Document,System.Int32,System.Boolean)">
+            <summary>
+            获取有效顶点数设定值过滤的元素列表
+            </summary>
+            <param name="doc"></param>
+            <param name="maxVertextNum"></param>
+            <param name="moreThan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetDocument(Autodesk.Revit.UI.ExternalCommandData)">
+            <summary>
+            获取激活文档的文档
+            </summary>
+            <param name="commandData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetUiDocument(Autodesk.Revit.UI.ExternalCommandData)">
+            <summary>
+            获取激活文档
+            </summary>
+            <param name="commandData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.Checkout(Autodesk.Revit.DB.Document)">
+            <summary>
+            检出元素
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetLevels(Autodesk.Revit.DB.Document)">
+            <summary>
+            获取标高集
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetBottomLevel(Autodesk.Revit.DB.Document)">
+            <summary>
+            获取最底层标高
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetTopLevel(Autodesk.Revit.DB.Document)">
+            <summary>
+            获取最顶层标高
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetTypeElements``1(Autodesk.Revit.DB.Document)">
+            <summary>
+            获取指定类型元素集
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetFirstTypeElement``1(Autodesk.Revit.DB.Document)">
+            <summary>
+            获取指定类型首个元素
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetCategoryElements(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInCategory)">
+            <summary>
+            获取指定类别元素集
+            </summary>
+            <param name="doc"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetFirstCategoryElement(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInCategory)">
+            <summary>
+            获取指定类别首个元素
+            </summary>
+            <param name="doc"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetTypeElements``1(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInCategory)">
+            <summary>
+            获取指定类型和类别元素集
+            </summary>
+            <param name="doc"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.FilterAssist.GetFirstTypeElement``1(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInCategory)">
+            <summary>
+            获取指定类型和类别元素集
+            </summary>
+            <param name="doc"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.HookHandler">
+            <summary>
+            钩子处理事件
+            </summary>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.HookUtil">
+            <summary>
+            钩子工具
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.HookId">
+            <summary>
+            钩子号
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.WhKeyboardLl">
+            <summary>
+            键盘消息
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.WmKeydown">
+            <summary>
+            按下消息
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.WmSyskeydown">
+            <summary>
+            系统级按下消息
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.WmKeyup">
+            <summary>
+            弹起消息
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.WmSyskeyup">
+            <summary>
+            系统级弹起消息
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.Handler">
+            <summary>
+            钩子处理器
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.KeyDownEvent">
+            <summary>
+            按下事件
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.KeyUpEvent">
+            <summary>
+            弹起事件
+            </summary>
+        </member>
+        <member name="P:KeLi.Common.Revit.Widget.HookUtil.KeyCode">
+            <summary>
+            键值
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.Hook(System.Action{System.Int32},System.Action{System.Int32})">
+            <summary>
+            监听
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.Unhook">
+            <summary>
+            停止监视
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.Callback(System.Int32,System.IntPtr,System.Int32@)">
+            <summary>
+            回调
+            </summary>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.SetWindowsHookEx(System.Int32,KeLi.Common.Revit.Widget.HookHandler,System.IntPtr,System.UInt32)">
+            <summary>
+            安装钩子
+            </summary>
+            <param name="idHook"></param>
+            <param name="lpfn"></param>
+            <param name="hMod"></param>
+            <param name="dwThreadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.UnhookWindowsHookEx(System.IntPtr)">
+            <summary>
+            卸载钩子
+            </summary>
+            <param name="hhk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)">
+            <summary>
+            继续下一个钩子
+            </summary>
+            <param name="hhk"></param>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.HookUtil.GetModuleHandle(System.String)">
+            <summary>
+            获取进程块指针
+            </summary>
+            <param name="lpModuleName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.KeyCodeEnum">
+            <summary>
+            按键枚举
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.KeyCodeEnum.LeftShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.KeyCodeEnum.RightShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.LinkUtil">
+            <summary>
+            外链工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.OpenCentralFile(Autodesk.Revit.ApplicationServices.Application,System.String,System.String)">
+            <summary>
+            打开中心文件
+            </summary>
+            <param name="app"></param>
+            <param name="serverPath"></param>
+            <param name="localPath"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.CompactCentralFile(Autodesk.Revit.ApplicationServices.Application,System.String)">
+            <summary>
+            压缩中心文件
+            </summary>
+            <param name="app"></param>
+            <param name="centralPath"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SetCentralFile(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            设置中心文件
+            </summary>
+            <param name="doc"></param>
+            <param name="centralPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SyncCentralFile(Autodesk.Revit.UI.UIApplication,System.String)">
+            <summary>
+            同步中心文件
+            </summary>
+            <param name="uiapp"></param>
+            <param name="comment"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.DetachedFromCentralFile(Autodesk.Revit.ApplicationServices.Application,System.String)">
+            <summary>
+            从中心文件分离
+            </summary>
+            <param name="app"></param>
+            <param name="centralPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.AddWorkset(Autodesk.Revit.DB.Document,System.String,System.String)">
+            <summary>
+            添加工作集
+            </summary>
+            <param name="doc"></param>
+            <param name="gridLvl"></param>
+            <param name="worksetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.AddCadLinks(Autodesk.Revit.DB.Document,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量添加图纸外链
+            </summary>
+            <param name="doc"></param>
+            <param name="linkPaths"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.AddCadLink(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            添加图纸外链
+            </summary>
+            <param name="doc"></param>
+            <param name="linkPath"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.AddRevitLinks(Autodesk.Revit.DB.Document,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量添加模型外链
+            </summary>
+            <param name="doc"></param>
+            <param name="linkPaths"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.AddRevitLink(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            添加模型外链
+            </summary>
+            <param name="doc"></param>
+            <param name="linkPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.RemoveRevitLinks(Autodesk.Revit.DB.Document,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量删除模型外链
+            </summary>
+            <param name="doc"></param>
+            <param name="linkPaths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.RemoveRevitLink(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            删除模型外链
+            </summary>
+            <param name="doc"></param>
+            <param name="linkPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SetRevitLinks(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量设置模型外链
+            </summary>
+            <param name="centralPath"></param>
+            <param name="linkPaths"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SetRevitLinks(Autodesk.Revit.DB.Document,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量设置模型外链
+            </summary>
+            <param name="doc"></param>
+            <param name="filePaths"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SetRevitLink(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            设置模型外链
+            </summary>
+            <param name="doc"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.GetRevitLinks(Autodesk.Revit.DB.Document)">
+            <summary>
+            获取模型外链名称列表
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SaveRevit(Autodesk.Revit.UI.UIApplication,System.String)">
+            <summary>
+            保存前台模型
+            </summary>
+            <param name="uiapp"></param>
+            <param name="blankPath"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.LinkUtil.SaveRevit(Autodesk.Revit.DB.Document,System.String)">
+            <summary>
+            保存后台模型
+            </summary>
+            <param name="doc"></param>
+            <param name="centralPath"></param>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.ParamUtil">
+            <summary>
+            参数管理工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ParamUtil.SetValue(Autodesk.Revit.DB.Element,System.String,System.String)">
+            <summary>
+            设置值
+            </summary>
+            <param name="paramName"></param>
+            <param name="value"></param>
+            <param name="elm"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ParamUtil.GetValue(Autodesk.Revit.DB.Element,System.String)">
+            <summary>
+            获取值
+            </summary>
+            <param name="elm"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ParamUtil.GetDefinition(Autodesk.Revit.DB.DefinitionGroup,System.String,System.Boolean)">
+            <summary>
+            获取参数
+            </summary>
+            <param name="group"></param>
+            <param name="paramName"></param>
+            <param name="canEdit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ParamUtil.GetGroup(Autodesk.Revit.DB.DefinitionGroups,System.String)">
+            <summary>
+            获取参数组
+            </summary>
+            <param name="groups"></param>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ParamUtil.GetGroups(Autodesk.Revit.UI.UIApplication,System.String)">
+            <summary>
+            获取参数组列表
+            </summary>
+            <param name="uiapp"></param>
+            <param name="paramPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.ParamUtil.InitParams(Autodesk.Revit.UI.UIApplication,Autodesk.Revit.DB.Element,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.Dictionary{System.String,System.Boolean}},System.String)">
+            <summary>
+            初始化参数
+            </summary>
+            <param name="uiapp"></param>
+            <param name="elm"></param>
+            <param name="gps"></param>
+            <param name="paramPath"></param>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.RibbonUtil">
+            <summary>
+            自定义按钮工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RibbonUtil.AddButton(Autodesk.Revit.UI.RibbonPanel,Autodesk.Revit.UI.PushButtonData)">
+            <summary>
+            添加按钮
+            </summary>
+            <param name="pnl"></param>
+            <param name="pbd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RibbonUtil.AddButton``1(Autodesk.Revit.UI.RibbonPanel,KeLi.Common.Revit.Widget.ButtonInfo{``0})">
+            <summary>
+            添加按钮
+            </summary>
+            <param name="pnl"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RibbonUtil.AddButtons(Autodesk.Revit.UI.RibbonPanel,System.Collections.Generic.List{Autodesk.Revit.UI.PushButtonData})">
+            <summary>
+            添加按钮列表
+            </summary>
+            <param name="pnl"></param>
+            <param name="pbds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RibbonUtil.AddPushButton(Autodesk.Revit.UI.RibbonPanel,Autodesk.Revit.UI.PulldownButtonData,System.Collections.Generic.List{Autodesk.Revit.UI.PushButtonData})">
+            <summary>
+            添加下拉按钮
+            </summary>
+            <param name="pnl"></param>
+            <param name="pbd"></param>
+            <param name="pbds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RibbonUtil.AddPushButtons(Autodesk.Revit.UI.RibbonPanel,System.Collections.Generic.Dictionary{Autodesk.Revit.UI.PulldownButtonData,System.Collections.Generic.List{Autodesk.Revit.UI.PushButtonData}})">
+            <summary>
+            添加下拉按钮列表
+            </summary>
+            <param name="pnl"></param>
+            <param name="pbds"></param>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.AreaUtil">
+            <summary>
+            面积工具
+            </summary>
+            <remarks>
+            实现的方式是对构件所有的几何体做投影计算每个投影面积，然后累加即可。
+            </remarks>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.AreaUtil.FT2_TO_M2">
+            <summary>
+            平方英尺转平方米
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.AreaUtil.GetShadowArea(Autodesk.Revit.DB.Element)">
+            <summary>
+            获取元素投影面积
+            </summary>
+            <param name="elm">元素</param>
+            <remarks>返回的是平方米(m²)作为单位的面积</remarks>
+            <exception cref="T:Autodesk.Revit.Exceptions.ArgumentNullException">输入的元素无效</exception>
+            <returns>返回元素投影面积</returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.BoxUtil">
+            <summary>
+            盒子工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.BoxUtil.GetRoundBox(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element)">
+            <summary>
+            获取近似盒子
+            </summary>
+            <param name="doc"></param>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.BoxUtil.GetRoundBox(Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            获取近似盒子
+            </summary>
+            <param name="box"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.NormalUtil">
+            <summary>
+            向量工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NormalUtil.GetDotProduct(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取数量积
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NormalUtil.GetSpaceNormal(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取空间法向量
+            </summary>
+            <param name="point"></param>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NormalUtil.GetSpaceNormal(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取空间法向量
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <param name="p3"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.NumberUtil">
+            <summary>
+            数据工具
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.NumberUtil.MM_TO_INCH">
+            <summary>
+            毫米转英寸
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.NumberUtil.MM_TO_FT">
+            <summary>
+            毫米转英尺
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.GetRound(System.Double,System.Int32)">
+            <summary>
+            获取近似值
+            </summary>
+            <param name="num"></param>
+            <param name="precision"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.CompareZero(System.Double,System.Double,System.Double)">
+            <summary>
+            与零比较结果
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <param name="precision"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.GetMin(System.Double,System.Double)">
+            <summary>
+            获取较小数
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.GetMax(System.Double,System.Double)">
+            <summary>
+            获取较大数
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.GetSquare(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取指数幂
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.GetPow(System.Double,System.Double,System.Int32)">
+            <summary>
+            获取指数幂
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <param name="pow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.ToFoot(System.Double)">
+            <summary>
+            毫米转英尺
+            </summary>
+            <param name="mm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.ToInch(System.Double)">
+            <summary>
+            毫米转英寸
+            </summary>
+            <param name="mm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.ToAngle(System.Double)">
+            <summary>
+            弧度转角度
+            </summary>
+            <param name="radian"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.NumberUtil.ToRadian(System.Double)">
+            <summary>
+            角度转弧度
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.RoomSelection">
+            <summary>
+            房间选择器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RoomSelection.AllowElement(Autodesk.Revit.DB.Element)">
+            <summary>
+            允许选择的元素
+            </summary>
+            <param name="elem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.RoomSelection.AllowReference(Autodesk.Revit.DB.Reference,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            允许选择引用
+            </summary>
+            <param name="reference"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.SelectionUtil">
+            <summary>
+            元素选择模块
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.SelectionUtil.PICK_POINT">
+            <summary>
+            拾取点
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.SelectionUtil.PICK_BOX">
+            <summary>
+            拾取盒子
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.SelectionUtil.PICK_OBJECT">
+            <summary>
+            拾取对象
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.SelectionUtil.PICK_OBJECTS">
+            <summary>
+            拾取对象列表
+            </summary>
+        </member>
+        <member name="F:KeLi.Common.Revit.Widget.SelectionUtil.PICK_ELEMENTS_BY_RECTANGLE">
+            <summary>
+            拾取矩形区域元素
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.SelectionUtil.GetPickPoint(Autodesk.Revit.UI.UIDocument)">
+            <summary>
+            获取选择点
+            </summary>
+            <param name="uidoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.SelectionUtil.GetPickedBox(Autodesk.Revit.UI.UIDocument)">
+            <summary>
+            获取选中区域
+            </summary>
+            <param name="uidoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.SelectionUtil.GetPickObject(Autodesk.Revit.UI.UIDocument)">
+            <summary>
+            获取选中元素的引用
+            </summary>
+            <param name="uidoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.SelectionUtil.GetPickObjects(Autodesk.Revit.UI.UIDocument)">
+            <summary>
+            获取选中元素的引用列表
+            </summary>
+            <param name="uidoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.SelectionUtil.GetPickElements(Autodesk.Revit.UI.UIDocument)">
+            <summary>
+            获取选中元素列表
+            </summary>
+            <param name="uidoc"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.TransactionUtil">
+            <summary>
+            事务工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TransactionUtil.AutoTransaction(Autodesk.Revit.DB.Document,System.Action)">
+            <summary>
+            自动执行事务
+            </summary>
+            <param name="doc"></param>
+            <param name="act"></param>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TransactionUtil.AutoException(System.Action)">
+            <summary>
+            自动处理异常
+            </summary>
+            <param name="act"></param>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.TypeConverter">
+            <summary>
+            类型转换器
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToLine(Autodesk.Revit.DB.LocationCurve)">
+            <summary>
+            曲线转直线
+            </summary>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToLine(Autodesk.Revit.DB.Curve)">
+            <summary>
+            曲线转直线
+            </summary>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToPlaneLine(Autodesk.Revit.DB.Curve)">
+            <summary>
+            空间线转平面线
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToPlanePoint(Autodesk.Revit.DB.XYZ)">
+            <summary>
+            空间点转平面点
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToReferArray(System.Collections.Generic.List{Autodesk.Revit.DB.Reference})">
+            <summary>
+            引用集转引用数组类型
+            </summary>
+            <param name="refers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToCurveArrArray(System.Collections.Generic.List{Autodesk.Revit.DB.CurveArray})">
+            <summary>
+            曲线数组类型集转曲线数组的数组类型
+            </summary>
+            <param name="curvess"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.ToCurveArray(System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            曲线集转曲线数组类型
+            </summary>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.TypeConverter.GetApproPoint(Autodesk.Revit.DB.XYZ,System.Int32)">
+            <summary>
+            获取近似点
+            </summary>
+            <param name="point"></param>
+            <param name="precision"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Widget.VisabilityUtil">
+            <summary>
+            可见性工具
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Widget.VisabilityUtil.SetExtrusionVisible(Autodesk.Revit.DB.GenericForm)">
+            <summary>
+            设置元素可见性
+            </summary>
+            <param name="gf"></param>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.LinePlaneRelation">
+            <summary>
+            线面关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LinePlaneRelation.IsPlaneParallel(Autodesk.Revit.DB.Curve,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面平行
+            </summary>
+            <param name="curve"></param>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LinePlaneRelation.IsPlaneOverlay(Autodesk.Revit.DB.Curve,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面重叠
+            </summary>
+            <param name="curve"></param>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LinePlaneRelation.IsPlaneVertical(Autodesk.Revit.DB.Curve,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面垂直
+            </summary>
+            <param name="curve"></param>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LinePlaneRelation.IsSpaceParallel(Autodesk.Revit.DB.Curve,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间平行
+            </summary>
+            <param name="curve"></param>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LinePlaneRelation.IsSpaceOverlay(Autodesk.Revit.DB.Curve,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间重叠
+            </summary>
+            <param name="curve"></param>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LinePlaneRelation.IsSpaceVertical(Autodesk.Revit.DB.Curve,System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间垂直
+            </summary>
+            <param name="curve"></param>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.LineRelation">
+            <summary>
+            线线关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsPlaneParallel(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否平面平行
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsPlaneOverlay(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否平面重叠
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsPlaneVertical(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否平面垂直
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsSpaceParallel(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否空间平行
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsSpaceOverlay(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否空间重叠
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsSpaceVertical(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否空间垂直
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsPlaneCross(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否平面相交
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.LineRelation.IsSpaceCross(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否空间相交
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.LineSolidRelation">
+            <summary>
+            线体关系
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.PlaneRelation">
+            <summary>
+            面面关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsPlaneParallel(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面平行
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsPlaneOverlay(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面重叠
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsPlaneVertical(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面垂直
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsSpaceParallel(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间平行
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsSpaceOverlay(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间重叠
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsSpaceVertical(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间垂直
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsPlaneCross(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否平面相交
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PlaneRelation.IsSpaceCross(System.Collections.Generic.List{Autodesk.Revit.DB.Curve},System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            是否空间相交
+            </summary>
+            <param name="curve1s"></param>
+            <param name="curve2s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.PlaneSolidRelation">
+            <summary>
+            面体关系
+            </summary>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.PointLineRelation">
+            <summary>
+            点线关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointLineRelation.OnPlaneLine(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否平面点在平面直线上
+            </summary>
+            <param name="t"></param>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointLineRelation.OnPlaneLine(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            是否平面点在平面直线上
+            </summary>
+            <param name="t"></param>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointLineRelation.OnSpaceLine(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.Curve)">
+            <summary>
+            是否空间点在空间直线上
+            </summary>
+            <param name="t"></param>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointLineRelation.OnSpaceLine(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            是否空间点在空间直线上
+            </summary>
+            <param name="t"></param>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.PointPlaneRelation">
+            <summary>
+            点面关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointPlaneRelation.GetPlanePosition(Autodesk.Revit.DB.XYZ,Autodesk.Revit.UI.Selection.PickedBox)">
+            <summary>
+            获取平面点在平面位置关系
+            </summary>
+            <param name="point"></param>
+            <param name="box"></param>
+            <returns>外部：-1；边上：0；内部：1</returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointPlaneRelation.GetSpacePosition(Autodesk.Revit.DB.XYZ,Autodesk.Revit.UI.Selection.PickedBox)">
+            <summary>
+            获取空间点在空间位置关系
+            </summary>
+            <param name="point"></param>
+            <param name="box"></param>
+            <returns>外部：-1；边上：0；内部：1</returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointPlaneRelation.GetPlanePosition(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            获取平面点在平面位置关系
+            </summary>
+            <param name="point"></param>
+            <param name="box"></param>
+            <returns>外部：-1；边上：0；内部：1</returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointPlaneRelation.GetSpacePosition(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            获取空间点在空间位置关系
+            </summary>
+            <param name="point"></param>
+            <param name="box"></param>
+            <returns>外部：-1；边上：0；内部：1</returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.PointRelation">
+            <summary>
+            点点关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMinPoint(System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            获取盒子最小点
+            </summary>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMinPoint(System.Collections.Generic.List{Autodesk.Revit.DB.XYZ})">
+            <summary>
+            获取盒子最小点
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMinPoint(Autodesk.Revit.DB.Curve)">
+            <summary>
+            获取盒子最小点
+            </summary>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMinPoint(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取盒子最小点
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMidPoint(Autodesk.Revit.DB.Curve)">
+            <summary>
+            获取中点
+            </summary>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMidPoint(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取中点
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMaxPoint(System.Collections.Generic.List{Autodesk.Revit.DB.Curve})">
+            <summary>
+            获取盒子最大点
+            </summary>
+            <param name="curves"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMaxPoint(System.Collections.Generic.List{Autodesk.Revit.DB.XYZ})">
+            <summary>
+            获取盒子最大点
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMaxPoint(Autodesk.Revit.DB.Curve)">
+            <summary>
+            获取盒子最大点
+            </summary>
+            <param name="curve"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMaxPoint(Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)">
+            <summary>
+            获取盒子最大点
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointRelation.GetMidPoint(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.Curve)">
+            <summary>
+            获取两条线最近处中点
+            </summary>
+            <param name="curve1"></param>
+            <param name="curve2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.PointSolidRelation">
+            <summary>
+            点体关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointSolidRelation.OnSolid">
+            <summary>
+            是否在表面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.PointSolidRelation.InSolid">
+            <summary>
+            是否在内部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeLi.Common.Revit.Relation.SolidRelaction">
+            <summary>
+            体体关系
+            </summary>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossPlaneBox(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)">
+            <summary>
+            快速盒子平面排斥
+            </summary>
+            <param name="doc"></param>
+            <param name="elm1"></param>
+            <param name="elm2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossPlaneBox(Autodesk.Revit.DB.BoundingBoxXYZ,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            快速盒子平面排斥
+            </summary>
+            <param name="box1"></param>
+            <param name="box2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossSpaceBox(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)">
+            <summary>
+            快速盒子空间排斥
+            </summary>
+            <param name="doc"></param>
+            <param name="elm1"></param>
+            <param name="elm2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossSpaceBox(Autodesk.Revit.DB.BoundingBoxXYZ,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            快速盒子空间排斥
+            </summary>
+            <param name="box1"></param>
+            <param name="box2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.StraddleLineBox(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)">
+            <summary>
+            跨立盒子平面实验
+            </summary>
+            <param name="doc"></param>
+            <param name="elm1"></param>
+            <param name="elm2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.StraddleLineBox(Autodesk.Revit.DB.BoundingBoxXYZ,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            跨立盒子平面实验
+            </summary>
+            <param name="box1"></param>
+            <param name="box2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.StraddleSpaceBox(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)">
+            <summary>
+            跨立盒子空间实验
+            </summary>
+            <param name="doc"></param>
+            <param name="elm1"></param>
+            <param name="elm2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.StraddleSpaceBox(Autodesk.Revit.DB.BoundingBoxXYZ,Autodesk.Revit.DB.BoundingBoxXYZ)">
+            <summary>
+            跨立盒子空间实验
+            </summary>
+            <param name="box1"></param>
+            <param name="box2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CutElement(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.CutFailureReason)">
+            <summary>
+            能否剪切元素
+            </summary>
+            <param name="doc"></param>
+            <param name="elm1"></param>
+            <param name="elm2"></param>
+            <param name="reason"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossGeometry(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)">
+            <summary>
+            是否元素相交
+            </summary>
+            <param name="doc"></param>
+            <param name="elm1"></param>
+            <param name="elm2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossGeometry(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.GeometryElement,Autodesk.Revit.DB.GeometryElement)">
+            <summary>
+            是否几何图形相交
+            </summary>
+            <param name="doc"></param>
+            <param name="ge1"></param>
+            <param name="ge2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossSolid(System.Collections.Generic.IEnumerable{Autodesk.Revit.DB.Solid},System.Collections.Generic.IEnumerable{Autodesk.Revit.DB.Solid})">
+            <summary>
+            是否实体相交
+            </summary>
+            <param name="solid1s"></param>
+            <param name="solid2s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossSolid(Autodesk.Revit.DB.Solid,System.Collections.Generic.IEnumerable{Autodesk.Revit.DB.Solid})">
+            <summary>
+            是否实体相交
+            </summary>
+            <param name="solid"></param>
+            <param name="solids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KeLi.Common.Revit.Relation.SolidRelaction.CrossSolid(Autodesk.Revit.DB.Solid,Autodesk.Revit.DB.Solid)">
+            <summary>
+            是否实体相交
+            </summary>
+            <param name="solid1"></param>
+            <param name="solid2"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
