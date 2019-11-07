@@ -51,6 +51,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Autodesk.Revit.DB;
 using KeLi.Common.Revit.Relation;
+using KeLi.Common.Tool.Other;
 
 namespace KeLi.Common.Revit.Widget
 {
@@ -115,7 +116,7 @@ namespace KeLi.Common.Revit.Widget
             var connector1 = pipe1.GetLatestConnector(point);
             var connector2 = pipe2.GetLatestConnector(point);
 
-            if (line1.GetSpacePosition(line2, out _, out _) != GeometryPosition.Parallel)
+            if (line1.GetSpacePosition(line2, out _) != GeometryPosition.Parallel)
                 doc.Create.NewUnionFitting(connector1, connector2);
             else
                 doc.Create.NewElbowFitting(connector1, connector2);
@@ -137,9 +138,9 @@ namespace KeLi.Common.Revit.Widget
             var connector1 = pipe1.GetLatestConnector(point);
             var connector2 = pipe2.GetLatestConnector(point);
             var connector3 = pipe3.GetLatestConnector(point);
-            var p12 = line1.GetSpacePosition(line2, out _, out _);
-            var p13 = line1.GetSpacePosition(line3, out _, out _);
-            var p23 = line2.GetSpacePosition(line3, out _, out _);
+            var p12 = line1.GetSpacePosition(line2, out _);
+            var p13 = line1.GetSpacePosition(line3, out _);
+            var p23 = line2.GetSpacePosition(line3, out _);
 
             if (p12 == GeometryPosition.Parallel && p13 == GeometryPosition.Vertical)
                 doc.Create.NewTeeFitting(connector1, connector2, connector3);
@@ -168,12 +169,12 @@ namespace KeLi.Common.Revit.Widget
             var connector2 = pipe2.GetLatestConnector(point);
             var connector3 = pipe3.GetLatestConnector(point);
             var connector4 = pipe4.GetLatestConnector(point);
-            var p12 = line1.GetSpacePosition(line2, out _, out _);
-            var p13 = line1.GetSpacePosition(line3, out _, out _);
-            var p14 = line1.GetSpacePosition(line4, out _, out _);
-            var p23 = line2.GetSpacePosition(line3, out _, out _);
-            var p24 = line2.GetSpacePosition(line4, out _, out _);
-            var p34 = line3.GetSpacePosition(line4, out _, out _);
+            var p12 = line1.GetSpacePosition(line2, out _);
+            var p13 = line1.GetSpacePosition(line3, out _);
+            var p14 = line1.GetSpacePosition(line4, out _);
+            var p23 = line2.GetSpacePosition(line3, out _);
+            var p24 = line2.GetSpacePosition(line4, out _);
+            var p34 = line3.GetSpacePosition(line4, out _);
 
             if (p12 == GeometryPosition.Parallel && p34 == GeometryPosition.Parallel && p13 == GeometryPosition.Vertical)
                 doc.Create.NewCrossFitting(connector1, connector2, connector3, connector4);
@@ -261,17 +262,14 @@ namespace KeLi.Common.Revit.Widget
                         if (!doc.RejectSpaceBox(walli, wallj))
                             continue;
 
-                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _, out _) != GeometryPosition.Parallel)
+                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _) != GeometryPosition.Parallel)
                             continue;
 
-                        try
+                        ExceptionUtil.AutoTry(() =>
                         {
                             JoinGeometryUtils.JoinGeometry(doc, walli, wallj);
                             result++;
-                        }
-                        catch
-                        {
-                        }
+                        });
                     }
                 }
             }
@@ -304,17 +302,14 @@ namespace KeLi.Common.Revit.Widget
                         if (!doc.RejectSpaceBox(walli, wallj))
                             continue;
 
-                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _, out _) != GeometryPosition.Parallel)
+                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _) != GeometryPosition.Parallel)
                             continue;
 
-                        try
+                        ExceptionUtil.AutoTry(() =>
                         {
                             JoinGeometryUtils.JoinGeometry(doc, walli, wallj);
                             result++;
-                        }
-                        catch
-                        {
-                        }
+                        });
                     }
                 }
             }
@@ -347,17 +342,14 @@ namespace KeLi.Common.Revit.Widget
                         if (!doc.RejectSpaceBox(walli, wallj))
                             continue;
 
-                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _, out _) != GeometryPosition.Parallel)
+                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _) != GeometryPosition.Parallel)
                             continue;
 
-                        try
+                        ExceptionUtil.AutoTry(() =>
                         {
                             JoinGeometryUtils.JoinGeometry(doc, walli, wallj);
                             result++;
-                        }
-                        catch
-                        {
-                        }
+                        });
                     }
                 }
             }
@@ -390,17 +382,14 @@ namespace KeLi.Common.Revit.Widget
                         if (!doc.RejectSpaceBox(walli, wallj))
                             continue;
 
-                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _, out _) != GeometryPosition.Parallel)
+                        if ((c1.Curve as Line).GetSpacePosition(c2.Curve as Line, out _) != GeometryPosition.Parallel)
                             continue;
 
-                        try
+                        ExceptionUtil.AutoTry(() =>
                         {
                             JoinGeometryUtils.JoinGeometry(doc, walli, wallj);
                             result++;
-                        }
-                        catch
-                        {
-                        }
+                        });
                     }
                 }
             }

@@ -67,18 +67,16 @@ namespace KeLi.Common.Revit.Relation
         /// <param name="insPt"></param>
         /// <param name="isTouch"></param>
         /// <returns></returns>
-        public static GeometryPosition GetPlanePosition(this Line line1, Line line2, out XYZ insPt, out bool isTouch)
+        public static GeometryPosition GetPlanePosition(this Line line1, Line line2, out XYZ insPt, bool isTouch = true)
         {
             insPt = null;
-            isTouch = false;
 
             if (line1.IsPlaneParallel(line2))
                 return GeometryPosition.Parallel;
 
-            insPt = line1.GetPlaneInsPoint(line2, out var touch);
-            isTouch = touch;
+            insPt = line1.GetPlaneInsPoint(line2, isTouch);
 
-            return touch ? GeometryPosition.Cross : GeometryPosition.Other;
+            return isTouch ? GeometryPosition.Cross : GeometryPosition.Other;
         }
 
         /// <summary>
@@ -89,7 +87,7 @@ namespace KeLi.Common.Revit.Relation
         /// <param name="insPt"></param>
         /// <param name="isTouch"></param>
         /// <returns></returns>
-        public static GeometryPosition GetSpacePosition(this Line line1, Line line2, out XYZ insPt, out bool isTouch)
+        public static GeometryPosition GetSpacePosition(this Line line1, Line line2, out XYZ insPt, bool isTouch = true)
         {
             throw new NotImplementedException();
         }
@@ -131,15 +129,12 @@ namespace KeLi.Common.Revit.Relation
         /// <param name="line2"></param>
         /// <param name="isTouch"></param>
         /// <returns></returns>
-        public static XYZ GetPlaneInsPoint(this Line line1, Line line2, out bool isTouch)
+        public static XYZ GetPlaneInsPoint(this Line line1, Line line2, bool isTouch = true)
         {
-            isTouch = false;
-
             var pt1 = line1.GetEndPoint(0);
             var pt2 = line1.GetEndPoint(1);
             var pt3 = line2.GetEndPoint(0);
             var pt4 = line2.GetEndPoint(1);
-
             var k1 = (pt2.X - pt1.X) * (pt3.X - pt4.X) * (pt3.Y - pt1.Y)
                      - pt3.X * (pt2.X - pt1.X) * (pt3.Y - pt4.Y)
                      + pt1.X * (pt2.Y - pt1.Y) * (pt3.X - pt4.X);
@@ -160,11 +155,8 @@ namespace KeLi.Common.Revit.Relation
             var flag3 = (result.Y - pt1.Y) * (result.Y - pt2.Y) <= 0;
             var flag4 = (result.Y - pt3.Y) * (result.Y - pt4.Y) <= 0;
 
-            // True cross.
-            if (flag1 && flag2 && flag3 && flag4)
-                isTouch = true;
-
-            return result;
+            // No touch or true cross returns the ins pt, otherwise returns null.
+            return !isTouch || flag1 && flag2 && flag3 && flag4 ? result : null;
         }
 
         /// <summary>
@@ -172,15 +164,16 @@ namespace KeLi.Common.Revit.Relation
         /// </summary>
         /// <param name="line"></param>
         /// <param name="lines"></param>
+        /// <param name="isTouch"></param>
         /// <returns></returns>
-        public static List<XYZ> GetPlaneInsPointList(this Line line, List<Line> lines)
+        public static List<XYZ> GetPlaneInsPointList(this Line line, List<Line> lines, bool isTouch = true)
         {
             var results = new List<XYZ>();
 
             // Must be filter parallel lines.
             lines = lines.Where(w => !line.IsPlaneParallel(w)).ToList();
 
-            lines.ForEach(f => results.Add(line.GetPlaneInsPoint(f, out _)));
+            lines.ForEach(f => results.Add(line.GetPlaneInsPoint(f, isTouch)));
 
             return results;
         }
@@ -192,7 +185,7 @@ namespace KeLi.Common.Revit.Relation
         /// <param name="line2"></param>
         /// <param name="isTouch"></param>
         /// <returns></returns>
-        public static XYZ GetSpaceInsPoint(this Line line1, Line line2, out bool isTouch)
+        public static XYZ GetSpaceInsPoint(this Line line1, Line line2, bool isTouch = true)
         {
             throw new NotImplementedException();
         }
@@ -202,12 +195,13 @@ namespace KeLi.Common.Revit.Relation
         /// </summary>
         /// <param name="line"></param>
         /// <param name="lines"></param>
+        /// <param name="isTouch"></param>
         /// <returns></returns>
-        public static List<XYZ> GetSpaceInsPointList(this Line line, List<Line> lines)
+        public static List<XYZ> GetSpaceInsPointList(this Line line, List<Line> lines, bool isTouch = true)
         {
             var results = new List<XYZ>();
 
-            lines.ForEach(f => results.Add(line.GetSpaceInsPoint(f, out _)));
+            lines.ForEach(f => results.Add(line.GetSpaceInsPoint(f, isTouch)));
 
             return results;
         }
