@@ -175,7 +175,7 @@ namespace KeLi.Common.Revit.Relation
 
             lines.ForEach(f => results.Add(line.GetPlaneInsPoint(f, isTouch)));
 
-            return results;
+            return results.Where(w => w != null).ToList();
         }
 
         /// <summary>
@@ -201,9 +201,12 @@ namespace KeLi.Common.Revit.Relation
         {
             var results = new List<XYZ>();
 
+            // Must be filter parallel lines.
+            lines = lines.Where(w => !line.IsSpaceParallel(w)).ToList();
+
             lines.ForEach(f => results.Add(line.GetSpaceInsPoint(f, isTouch)));
 
-            return results;
+            return results.Where(w => w != null).ToList();
         }
 
         /// <summary>
